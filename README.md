@@ -30,15 +30,15 @@ Desenvolvido com foco em boas práticas, organização e escalabilidade.
 
 1. Clone o projeto:
  
-git clone https://github.com/FabioHNardella/taskforce-api.git
-cd taskforce-api
+ git clone https://github.com/FabioHNardella/taskforce-api.git
+ cd taskforce-api
 
 2. Configure o banco de dados no application.properties:
 
-spring.datasource.url=jdbc:mysql://localhost:3306/taskforce
-spring.datasource.username=seu_usuario
-spring.datasource.password=sua_senha
-spring.jpa.hibernate.ddl-auto=update
+ spring.datasource.url=jdbc:mysql://localhost:3306/taskforce
+ spring.datasource.username=seu_usuario
+ spring.datasource.password=sua_senha
+ spring.jpa.hibernate.ddl-auto=update
 
 3. Execute com o Maven Wrapper:
 
@@ -64,3 +64,7 @@ Desenvolvido por Fábio Henrique Nardella
 ## 🔗 Links
 [![github](https://img.shields.io/badge/GITHUB-000?style=for-the-badge)](https://github.com/FabioHNardella)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/fabiohenriquenardella/)
+
+## Objetivo
+- Este projeto foi desenvolvido como parte de uma jornada prática para demonstrar domínio técnico em desenvolvimento backend com Java e Spring Boot, com foco em boas práticas reais, não apenas em código funcional.
+É uma vitrine para mostrar competência, disciplina e capacidade de entrega.
