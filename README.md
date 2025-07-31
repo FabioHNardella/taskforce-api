@@ -1,22 +1,66 @@
 # TaskForce API
 
-TaskForce API é um gerenciador de tarefas, onde podemos listar, criar, atualizar e deletar tarefas, e há a possibilidade de enviar lembretes pelo email, e cada tarefa terminada será enviada automaticamente para seu email.
+API RESTful para gerenciamento de tarefas com prioridades, prazos e status.  
+Desenvolvido com foco em boas práticas, organização e escalabilidade.
 
-
-
+---
 
 ## Funcionalidades
 
-- CRUD para as tarefas
-- Lembretes enviados via email
+- Criação, listagem, atualização e exclusão de tarefas (CRUD)
+- Filtro por status, prioridade e prazo (em breve)
+- Envio automático de e-mail ao concluir uma tarefa (em breve)
+- Validações aplicadas via JPA e Bean Validation
 
+---
 
-## Stack utilizada
+## Tecnologias Utilizadas
 
-**Back-end:** Java, Spring
+- Java 24
+- Spring Boot 3.4.3
+- Spring Data JPA
+- MySQL
+- Hibernate Validator
+- Insomnia (testes de requisição)
+- Maven
 
-**Database:** MySQL
+---
 
+## Como Executar Localmente
 
-## Status
-Em Desenvolvimento
+1. Clone o projeto:
+ 
+git clone https://github.com/FabioHNardella/taskforce-api.git
+cd taskforce-api
+
+2. Configure o banco de dados no application.properties:
+
+spring.datasource.url=jdbc:mysql://localhost:3306/taskforce
+spring.datasource.username=seu_usuario
+spring.datasource.password=sua_senha
+spring.jpa.hibernate.ddl-auto=update
+
+3. Execute com o Maven Wrapper:
+
+./mvnw spring-boot:run
+
+## Principais Endpoints
+
+| Método | Endpoint      | Descrição                     |
+| ------ | ------------- | ----------------------------- |
+| GET    | /tarefas      | Lista todas as tarefas        |
+| POST   | /tarefas      | Cria uma nova tarefa          |
+| PUT    | /tarefas/{id} | Atualiza uma tarefa existente |
+| DELETE | /tarefas/{id} | Deleta uma tarefa pelo ID     |
+
+## Status do Projeto
+- Em desenvolvimento
+- Próximo passo: Envio de e-mails ao concluir tarefa
+- Otimizações de performance e limpeza de tarefas antigas pendentes
+
+## Autor
+Desenvolvido por Fábio Henrique Nardella
+
+## 🔗 Links
+[![github](https://img.shields.io/badge/GITHUB-000?style=for-the-badge)](https://github.com/FabioHNardella)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/fabiohenriquenardella/)
