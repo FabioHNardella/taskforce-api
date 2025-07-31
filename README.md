@@ -16,8 +16,8 @@ Desenvolvido com foco em boas práticas, organização e escalabilidade.
 
 ## Tecnologias Utilizadas
 
-- Java 24
-- Spring Boot 3.4.3
+- Java 24 ![Java](https://img.shields.io/badge/Java-24-blue)
+- Spring Boot 3.4.3 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.3-brightgreen)
 - Spring Data JPA
 - MySQL
 - Hibernate Validator
