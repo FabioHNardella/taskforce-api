@@ -5,5 +5,5 @@ import jakarta.persistence.Enumerated;
 
 public enum Status {
     @Enumerated(EnumType.STRING)
-    PENDENTE, EM_ANDAMENTO, CONCLUIDA
+    PENDENTE, EM_ANDAMENTO, CONCLUIDA, VENCIDA
 }

@@ -24,7 +24,13 @@ public class TarefaService {
         return tarefaRepository.save(tarefa);
     }
 
-    public Optional<Tarefa> buscarPorId(long id) {
+    public ResponseEntity<Tarefa> buscarPorId(long id) {
+        Optional<Tarefa> tarefaOptional = tarefaRepository.findById(id);
+        if(tarefaOptional.isEmpty()){
+            return ResponseEntity.notFound().build();
+        }
+
+
         return tarefaRepository.findById(id);
     }
 

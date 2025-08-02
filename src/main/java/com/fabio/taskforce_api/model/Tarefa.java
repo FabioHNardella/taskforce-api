@@ -5,8 +5,10 @@ import com.fabio.taskforce_api.enums.Status;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import org.springframework.cglib.core.Local;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 
 @Entity
@@ -71,5 +73,9 @@ public class Tarefa {
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    public boolean podeSerMarcadaComoVencida(LocalDate agora){
+        return !this.status.equals(Status.CONCLUIDA) && !this.status.equals(Status.VENCIDA) && this.dataPrazo.isBefore(agora);
     }
 }

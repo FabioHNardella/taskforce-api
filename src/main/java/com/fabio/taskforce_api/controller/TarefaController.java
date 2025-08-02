@@ -24,6 +24,11 @@ public class TarefaController {
         return tarefaService.listarTodasTarefas();
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Tarefa> encontrarTarefaPorId(Long id){
+        return tarefaService.buscarPorId(id);
+    }
+
     @PutMapping("/{id}")
     public ResponseEntity<Tarefa> atualizar(@PathVariable Long id, @RequestBody @Valid Tarefa tarefaAtualizada) {
         return tarefaService.atualizarTarefa(id, tarefaAtualizada);
